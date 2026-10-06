@@ -2,9 +2,7 @@
 
 University coursework (2020) for the *Computational Intelligence* (Υπολογιστική Νοημοσύνη) course:
 predicting users' movie ratings on the [MovieLens 100K](https://grouplens.org/datasets/movielens/100k/) dataset with a neural network.
-Part B, which uses a genetic algorithm on the same problem, is in [ypologistiki_noimosini_b](https://github.com/Turnedone/ypologistiki_noimosini_b).
-
-> **Archived coursework.** This repository is kept as a record and isn't maintained.
+Part B, which uses a genetic algorithm on the same problem, is in [`part-b/`](../part-b).
 
 ## What's here
 
