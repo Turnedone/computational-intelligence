@@ -1,0 +1,22 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - name: Smoke-test both parts on the real data
+        run: |
+          python -m part_a.preprocess
+          python -m part_a.train --epochs 5 --folds 2 --plot /tmp/loss.png
+          python -m part_b.genetic --user 2 --generations 10 --plot /tmp/fitness.png
